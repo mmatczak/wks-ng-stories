@@ -4,7 +4,7 @@ import { Flight } from '../../model/flight.model';
 import { Observable } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { switchMap, tap } from 'rxjs/operators';
-import { ProgressIndicatorService } from '../../../../../../flight-lib/src/lib/progress-indicator/progress-indicator-service/progress-indicator.service';
+import { ProgressIndicatorService } from 'flight-lib';
 
 
 export interface FlightSearchCriteria {

@@ -18,6 +18,6 @@ export class FlightRestService {
         (accParams, [key, value]) => value ? accParams.append(key, value) : accParams,
         new HttpParams());
 
-    return this.http.get<Flight[]>('api/flights', {params}).pipe(delay(1000));
+    return this.http.get<Flight[]>('api/flights', {params}).pipe(delay(3000));
   }
 }
