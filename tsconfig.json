@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "flight-lib": [
+        "dist/flight-lib"
+      ],
+      "flight-lib/*": [
+        "dist/flight-lib/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

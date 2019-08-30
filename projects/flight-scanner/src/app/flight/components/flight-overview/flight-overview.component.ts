@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FlightRestService } from '../../services/flight-rest.service';
 import { Flight } from '../../model/flight.model';
 import { Observable } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { switchMap, tap } from 'rxjs/operators';
+import { ProgressIndicatorService } from '../../../../../../flight-lib/src/lib/progress-indicator/progress-indicator-service/progress-indicator.service';
 
 
 export interface FlightSearchCriteria {
@@ -23,11 +24,14 @@ export class FlightOverviewComponent {
 
   constructor(private readonly flights: FlightRestService,
               private readonly route: ActivatedRoute,
-              private readonly router: Router) {
+              private readonly router: Router,
+              private readonly progressIndicator: ProgressIndicatorService) {
     this.results$ = route.params
       .pipe(
         tap(searchCriteria => this.searchCriteria = searchCriteria),
-        switchMap(searchCriteria => this.flights.find(searchCriteria))
+        tap(() => progressIndicator.on()),
+        switchMap(searchCriteria => this.flights.find(searchCriteria)),
+        tap(() => progressIndicator.off())
       );
   }
 

@@ -120,6 +120,41 @@
           }
         }
       }
+    },
+    "flight-lib": {
+      "projectType": "library",
+      "root": "projects/flight-lib",
+      "sourceRoot": "projects/flight-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/flight-lib/tsconfig.lib.json",
+            "project": "projects/flight-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/flight-lib/src/test.ts",
+            "tsConfig": "projects/flight-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/flight-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/flight-lib/tsconfig.lib.json",
+              "projects/flight-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "flight-scanner"
 }

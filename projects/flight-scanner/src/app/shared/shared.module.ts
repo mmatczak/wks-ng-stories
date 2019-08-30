@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AppHeaderComponent } from './header/app-header/app-header.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProgressIndicatorModule } from 'flight-lib';
 
 
 @NgModule({
@@ -12,7 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppHeaderComponent
   ],
   imports: [
-    CommonModule
+    CommonModule, ProgressIndicatorModule
   ]
 })
 export class SharedModule { }
