@@ -1,0 +1,9 @@
+@import "app-variables";
+
+$red: $appRed;
+
+@import "../../../../node_modules/bootstrap/scss/bootstrap";
+
+h1 {
+  font-weight: normal;
+}
