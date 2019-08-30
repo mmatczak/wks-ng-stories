@@ -1,10 +1,13 @@
-<form>
+<form [formGroup]="searchCriteriaForm">
   <div class="row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="First name">
+      <input formControlName="originCode" type="text" class="form-control" placeholder="Origin Code">
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Last name">
+      <input formControlName="destinationCode" type="text" class="form-control" placeholder="Destination Code">
+    </div>
+    <div class="col">
+      <button type="submit" class="btn btn-primary">Search</button>
     </div>
   </div>
 </form>

@@ -9,10 +9,13 @@ export interface FlightSearchCriteria {
 @Component({
   selector: 'app-flight-overview',
   templateUrl: './flight-overview.component.html',
-  styleUrls: ['./flight-overview.component.css']
+  styleUrls: ['./flight-overview.component.scss']
 })
 export class FlightOverviewComponent implements OnInit {
-  searchCriteria: FlightSearchCriteria = {};
+  searchCriteria: FlightSearchCriteria = {
+    destinationCode: 'WRO',
+    originCode: 'POZ'
+  };
 
   constructor() { }
 
