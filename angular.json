@@ -5,7 +5,11 @@
   "projects": {
     "flight-scanner": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
       "root": "projects/flight-scanner",
       "sourceRoot": "projects/flight-scanner/src",
       "prefix": "app",

@@ -1,1 +1,4 @@
-<p>flight-overview works!</p>
+<app-search-criteria
+  [value]="searchCriteria"
+  (valueChange)="search($event)"></app-search-criteria>
+<app-search-results></app-search-results>
