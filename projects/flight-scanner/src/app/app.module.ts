@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from './shared/shared.module';
 import { FlightOverviewComponent } from './flight/components/flight-overview/flight-overview.component';
 import { FlightModule } from './flight/flight.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { FlightModule } from './flight/flight.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {path: '', redirectTo: '/flights', pathMatch: 'full'},
       {path: 'flights', component: FlightOverviewComponent}

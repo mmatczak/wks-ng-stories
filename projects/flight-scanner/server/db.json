@@ -1,0 +1,29 @@
+{
+  "airports":[
+    {
+      "code": "WRO",
+      "name": "Wroclaw"
+    },
+    {
+      "code": "MUC",
+      "name": "Munich"
+    },
+    {
+      "code": "FRA",
+      "name": "Frankfurt"
+    },
+    {
+      "code": "POZ",
+      "name": "Poznan"
+    }
+  ],
+  "flights": [
+    {
+      "originCode": "WRO",
+      "timeAtOrigin": "07:30",
+      "destinationCode": "POZ",
+      "timeAtDestination": "08:30",
+      "operator": "Lufthansa"
+    }
+  ]
+}
