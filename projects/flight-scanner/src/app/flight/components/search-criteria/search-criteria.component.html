@@ -1,4 +1,4 @@
-<form [formGroup]="searchCriteriaForm">
+<form [formGroup]="searchCriteriaForm" (ngSubmit)="notifyOnSearch()">
   <div class="row">
     <div class="col">
       <input formControlName="originCode" type="text" class="form-control" placeholder="Origin Code">

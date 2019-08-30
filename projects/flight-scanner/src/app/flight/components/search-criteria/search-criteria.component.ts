@@ -24,4 +24,10 @@ export class SearchCriteriaComponent {
       destinationCode: '',
     });
   }
+
+  notifyOnSearch() {
+    if (this.searchCriteriaForm.valid) {
+      this.valueChange.emit(this.searchCriteriaForm.value);
+    }
+  }
 }

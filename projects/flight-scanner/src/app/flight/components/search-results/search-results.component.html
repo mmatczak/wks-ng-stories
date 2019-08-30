@@ -1,1 +1,22 @@
-<p>search-results works!</p>
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Origin</th>
+    <th scope="col">Time at Origin</th>
+    <th scope="col">Destination</th>
+    <th scope="col">Time at Destination</th>
+    <th scope="col">Operator</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let flight of value; index as i">
+    <th scope="row">{{i + 1}}</th>
+    <td>{{flight.originCode}}</td>
+    <td>{{flight.timeAtOrigin}}</td>
+    <td>{{flight.destinationCode}}</td>
+    <td>{{flight.timeAtDestination}}</td>
+    <td>{{flight.operator}}</td>
+  </tr>
+  </tbody>
+</table>
